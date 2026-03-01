@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  #__next {
+    @apply w-full h-full m-0 p-0; /* full height, no margin/padding */
+  }
+}
+
+/* ===================== WhatsApp style thin scrollbar ===================== */
+
+/* Firefox */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
+/* Chrome, Safari, Edge */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;  /* vertical scrollbar width */
+  height: 6px; /* horizontal scrollbar height */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4); /* semi-transparent */
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent; /* overlay effect */
+}
